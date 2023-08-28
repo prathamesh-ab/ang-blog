@@ -26,12 +26,38 @@ export class CategoriesComponent {
     let categoryData = {
       category : formData.value.category
     }
+
+    let subCategoryData = {
+      subCategory: 'subCategory1'
+    }
+
+    let subCategoryData1 = {
+      subCategory: 'subCategory2'
+    }
     // console.log(categoryData);
     // console.log(formData);
     
     this.afs.collection('categories').add(categoryData).then(docRef => {
       console.log(docRef);
+
+      this.afs.doc(`categories/${docRef.id}`).collection('subcategories').add(subCategoryData).then(docRef1 => {
+
+      
+
+      // this.afs.collection('categories').doc(docRef.id).collection('subcategories').add(subCategoryData).then(docRef1 => {
+      //   console.log(docRef1);
+
+        this.afs.doc(`categories/${docRef}/subcategories/${docRef1}`).collection('subsubcategories').add(subCategoryData1).then(docRef2 => {
+          console.log(docRef2);
+          
+        })
+
+        // this.afs.collection('categories').doc(docRef.id).collection('subcategories').doc(docRef1.id).collection('subsubcategories').add(subCategoryData1).then(docRef2 => {
+        //   console.log(docRef2);
+        // })
+      })
     })
+
     .catch(err => {
       console.log(err);
     })
