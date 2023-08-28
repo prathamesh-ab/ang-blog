@@ -2,7 +2,7 @@ input[type = text],input[type = email]{
     width: 100%;
 }
 
-.alert{
-    display:inline-block;
+.abd{
+    /* display:inline-block; */
     width: 100%;
 }

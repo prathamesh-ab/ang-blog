@@ -12,15 +12,7 @@ export class CategoriesComponent {
 
   constructor(private afs: AngularFirestore){}
 
-  // obj:object = {};
-  arr:Array<any> = [];
 
-  pushValue(f: FormControl){
-    
-    this.arr.push(f);
-    console.log(f);
-    
-  }
 
   onSubmit(formData:NgForm){
     let categoryData = {
