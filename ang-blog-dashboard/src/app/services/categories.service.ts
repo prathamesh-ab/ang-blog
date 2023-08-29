@@ -9,9 +9,7 @@ export class CategoriesService {
 
   constructor(private afs: AngularFirestore) {}
 
-  saveData(data:NgForm){
-   
-   
+  saveData(data:any){
     
     this.afs.collection('categories').add(data).then(docRef => {
       console.log(docRef);
