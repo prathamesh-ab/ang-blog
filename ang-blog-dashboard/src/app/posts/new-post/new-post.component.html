@@ -38,6 +38,7 @@
                             <label for="">Please select a Post Category</label>
                             <select class="from-control">
                                 <option value="" disabled>Please Select a category</option>
+                                <option *ngFor="let category of categories;let i = index">{{category.data.category}}</option>
                             </select>
                         </div>
         
@@ -57,7 +58,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="">Content</label>
-                            <textarea cols="30" rows="10" class="form-control"></textarea>
+                            <angular-editor placeholder="Add your content here"></angular-editor>
                         </div>
                     </div>
                 </div>

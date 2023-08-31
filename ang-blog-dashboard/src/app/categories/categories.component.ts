@@ -34,7 +34,6 @@ export class CategoriesComponent implements OnInit{
       this.categoryService.updateData(this.categoryId,categoryData);
       this.formStatus = 'Add';
     }
-
     
   }
 
