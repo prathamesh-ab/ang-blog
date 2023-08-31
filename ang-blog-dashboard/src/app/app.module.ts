@@ -20,6 +20,8 @@ import { CategoriesComponent } from './categories/categories.component';
 
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewPostComponent } from './posts/new-post/new-post.component';
+import { AllPostComponent } from './posts/all-post/all-post.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    NewPostComponent,
+    AllPostComponent
   ],
   imports: [
     BrowserModule,
